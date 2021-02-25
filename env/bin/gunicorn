@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' "/Users/fullstack/Documents/Data Sciencs /Data\science_Nano_Degree/Udacity30-11-20/Projects/tow_DataEngenering/the_new_last/env/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from gunicorn.app.wsgiapp import run
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(run())
